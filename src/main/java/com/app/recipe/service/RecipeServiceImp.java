@@ -84,7 +84,7 @@ public class RecipeServiceImp implements RecipeService {
             recipe.getLikes().add(user.getId());
         }
        
-        return null;
+        return recipeRepository.save(recipe);
     }
 
 
