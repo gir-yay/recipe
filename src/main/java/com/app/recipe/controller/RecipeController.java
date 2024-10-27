@@ -59,7 +59,7 @@ public class RecipeController {
         return uodatedRecipe;
     }
  
-    @PutMapping("/{recipeId}/user/{userId}")
+    @PutMapping("/{recipeId}/like/user/{userId}")
     public Recipe likeRecipe(@PathVariable Long userId, @PathVariable Long recipeId) throws Exception{
         User user = userService.findUserById(userId);
         Recipe likedRecipe =  recipeService.likeRecipe(recipeId, user );
