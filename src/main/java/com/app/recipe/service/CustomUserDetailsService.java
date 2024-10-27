@@ -1,5 +1,6 @@
 package com.app.recipe.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -16,6 +17,7 @@ import com.app.recipe.model.User;
 @Service
 public class CustomUserDetailsService implements UserDetailsService{
 
+    @Autowired
     private UserRepository userRepository;
 
     @Override

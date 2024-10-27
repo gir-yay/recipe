@@ -53,11 +53,12 @@ public class AuthController {
             throw new Exception("email already in use!");
         }
 
+
         User createdUser = new User();
+        createdUser.setFullName(fullname);
         createdUser.setEmail(email);
         createdUser.setPassword(passwordEncoder.encode(password));
-        createdUser.setFullName(fullname);
-
+        
         User savedUser = userRepository.save(createdUser);
 
         Authentication authentication = new UsernamePasswordAuthenticationToken(email, password);
