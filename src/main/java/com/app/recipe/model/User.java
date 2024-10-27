@@ -26,6 +26,6 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    @Column(name = "full_name")
+    @Column(name = "fullname")
     private String fullName;
 }
